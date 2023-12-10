@@ -99,16 +99,16 @@ async function buildDist (platform, arch, folder) {
     ],
     repository: {
       type: 'git',
-      url: 'git+https://github.com/holepunchto/cmake-runtime.git'
+      url: 'git+https://github.com/NickGerleman/cmake-runtime.git'
     },
-    author: 'Holepunch',
+    author: 'NickGerleman',
     license: 'BSD-3-clause', // cmake license
     bugs: {
-      url: 'https://github.com/holepunchto/cmake-runtime/issues'
+      url: 'https://github.com/NickGerleman/cmake-runtime/issues'
     },
-    homepage: 'https://github.com/holepunchto/cmake-runtime',
+    homepage: 'https://github.com/NickGerleman/cmake-runtime',
     os: [
-      platform
+      platform === 'windows' ? 'win32' : platform,
     ]
   }
 
@@ -151,10 +151,8 @@ async function runProcessIn (cwd, cmd, ...args) {
 
 async function fetchAll () {
   await fetchDist('windows', 'x64', `cmake-${version}-windows-x86_64.zip`)
-  await fetchDist('windows', 'arm64', `cmake-${version}-windows-arm64.zip`)
   await fetchDist('darwin', null, `cmake-${version}-macos-universal.tar.gz`)
   await fetchDist('linux', 'x64', `cmake-${version}-linux-x86_64.tar.gz`)
-  await fetchDist('linux', 'arm64', `cmake-${version}-linux-aarch64.tar.gz`)
 
   pkg.bin = {}
   for (const id of bins) {

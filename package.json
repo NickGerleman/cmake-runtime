@@ -1,6 +1,6 @@
 {
-  "name": "cmake-runtime",
-  "version": "3.27.7-1",
+  "name": "@yogalayout/cmake-bin",
+  "version": "3.28.0-1",
   "description": "cmake binaries for windows, linux and macos",
   "bin": {
     "cmake": "bin/cmake",
@@ -19,20 +19,18 @@
     "publish-all": "node ./publish.mjs"
   },
   "optionalDependencies": {
-    "cmake-runtime-windows-x64": "3.27.7",
-    "cmake-runtime-windows-arm64": "3.27.7",
-    "cmake-runtime-darwin-universal": "3.27.7",
-    "cmake-runtime-linux-x64": "3.27.7",
-    "cmake-runtime-linux-arm64": "3.27.7"
+    "@yogalayout/cmake-bin-windows-x64": "3.28.0",
+    "@yogalayout/cmake-bin-darwin-universal": "3.28.0",
+    "@yogalayout/cmake-bin-linux-x64": "3.28.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/holepunchto/cmake-runtime.git"
+    "url": "https://github.com/NickGerleman/cmake-runtime.git"
   },
-  "author": "Holepunch",
+  "author": "NickGerleman",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/holepunchto/cmake-runtime/issues"
+    "url": "https://github.com/NickGerleman/cmake-runtime/issues"
   },
-  "homepage": "https://github.com/holepunchto/cmake-runtime"
+  "homepage": "https://github.com/NickGerleman/cmake-runtime"
 }
